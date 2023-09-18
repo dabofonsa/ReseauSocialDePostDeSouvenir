@@ -18,11 +18,11 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
-const CONNECTION_URL = 'lien de connexion à votre base de données mongoDB';
+const MONGODB_URL = 'lien de connexion à votre base de données mongoDB';
 const PORT = process.env.PORT || 5002;
 
 
-mongoose.connect(CONNECTION_URL)
+mongoose.connect(MONGODB_URL)
 .then(()=>{
     console.log("Serveur Connecté a la BD")
     app.listen(PORT, ()=>console.log(`Le serveur est en écoute sur le port: ${PORT}`))
