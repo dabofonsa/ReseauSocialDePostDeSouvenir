@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
-const MONGODB_URL = 'lien de connexion à votre base de données mongoDB';
+const CONNECTION_URL = 'mongodb+srv://fonsadabo:123456Test@cluster0.vpi9v5z.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5002;
 
 
