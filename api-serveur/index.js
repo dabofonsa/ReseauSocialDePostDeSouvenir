@@ -22,7 +22,7 @@ const CONNECTION_URL = 'mongodb+srv://fonsadabo:123456Test@cluster0.vpi9v5z.mong
 const PORT = process.env.PORT || 5002;
 
 
-mongoose.connect(MONGODB_URL)
+mongoose.connect(CONNECTION_URL)
 .then(()=>{
     console.log("Serveur Connecté a la BD")
     app.listen(PORT, ()=>console.log(`Le serveur est en écoute sur le port: ${PORT}`))
