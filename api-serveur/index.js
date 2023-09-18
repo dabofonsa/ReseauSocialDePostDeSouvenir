@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://fonsadabo:123456Test@cluster0.fuzyogi.mongodb.net/?retryWrites=true&w=majority';
+const CONNECTION_URL = 'mongodb+srv://fonsadabo:123456Test@postsouvenirdeploiment.pkww1al.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5002;
 
 
