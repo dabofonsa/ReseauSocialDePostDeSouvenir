@@ -1,3 +1,4 @@
 [build]
-  command = "cd app-client && npm ci || npm install --legacy-peer-deps && npm run build"
-  publish = "app-client/build"
+base = "app-client"
+publish = "app-client/build"
+command = "npm install --legacy-peer-deps && npm run build"
