@@ -18,11 +18,17 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://fonsadabo:123456Test@postsouvenirdeploiment.pkww1al.mongodb.net/?retryWrites=true&w=majority';
+////////////////////////////////////
+app.get('/', (req, res) => {
+    res.send('APP IS RUNNING.');
+})
+////////////////////////////////////
+
+const CON_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT || 5002;
 
 
-mongoose.connect(CONNECTION_URL)
+mongoose.connect(CON_URL)
 .then(()=>{
     console.log("Serveur Connecté a la BD")
     app.listen(PORT, ()=>console.log(`Le serveur est en écoute sur le port: ${PORT}`))
